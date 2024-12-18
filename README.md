@@ -5,7 +5,7 @@ Do the following
 1. `npm install`
 2. `PLATFORM=ps5 npm run dev`
 
-Now the app will only import files that are just for ps5.
+Now the app will only prioritize imports that are for ps5, and fallback to the default variant if it is not available.
 
 Change it for ps4:
 
@@ -13,10 +13,8 @@ Change it for ps4:
 PLATFORM=ps4 npm run dev
 ```
 
-Now the app will only import files just for ps4.
+Now the app will prioritize imports that are for ps4, and fallback to the default variant if it is not available.
 
 # Why do this?
 
-This allows ways to have 1 app, or a package that can be tailored for different devices.
-
-The non-prefixed variant is the default variant, while the prefixed variant is the non-default variant.
+This allows ways to have 1 app, or a package that can be tailored for different devices, without needing to have a package per each device type. That doesn't scale.
